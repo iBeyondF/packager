@@ -160,6 +160,11 @@
     display: block;
     margin-bottom: 4px;
   }
+  .color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
   input[type=number] {
     width: 60px;
   }
@@ -303,21 +308,18 @@
     <p>{$_('options.controlsHelp')}</p>
 
     <h3>{$_('options.colors')}</h3>
-    <!-- svelte-ignore a11y-label-has-associated-control -->
-    <label>
-      <ColorPicker bind:value={$options.appearance.background} />
+    <div class="color">
+      <ColorPicker bind:value={$options.appearance.background} defaultColor={defaultOptions.appearance.background} />
       {$_('options.backgroundColor')}
-    </label>
-    <!-- svelte-ignore a11y-label-has-associated-control -->
-    <label>
-      <ColorPicker bind:value={$options.appearance.foreground} />
+    </div>
+    <div class="color">
+      <ColorPicker bind:value={$options.appearance.foreground} defaultColor={defaultOptions.appearance.foreground} />
       {$_('options.foregroundColor')}
-    </label>
-    <!-- svelte-ignore a11y-label-has-associated-control -->
-    <label>
-      <ColorPicker bind:value={$options.appearance.accent} />
+    </div>
+    <div class="color">
+      <ColorPicker bind:value={$options.appearance.accent} defaultColor={defaultOptions.appearance.accent} />
       {$_('options.accentColor')}
-    </label>
+    </div>
 
     <h3>{$_('options.interaction')}</h3>
     <div class="option-group">

@@ -385,5 +385,19 @@
       "string": "Light",
       "context": "Light mode option"
     }
+  },
+  "color": {
+    "color": {
+      "string": "Color",
+      "context": "Refers to the hue of a color"
+    },
+    "saturation": {
+      "string": "Saturation",
+      "context": "Refers to the saturation of a color"
+    },
+    "brightness": {
+      "string": "Brightness",
+      "context": "Refers to the brightness of a color"
+    }
   }
 }
